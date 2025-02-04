@@ -1,9 +1,11 @@
-version: "3.9" #this is to maintain the version of out configuration
+#version: "3.9" #this is to maintain the version of out configuration (info the version is not required from the yaer 2021)
 
 services: #the services contains app that is going to run our application
   app:
     build:
       context: . #means we are building in the root directory
+      args:
+        - DEV=true
     ports:
       - "8000:8000" #mapping port 8000 of our local machine to inside our docker container
     volumes:
