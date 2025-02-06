@@ -20,7 +20,7 @@ services: #the services contains app that is going to run our application
       - DB_USER=devuser
       - DB_PASS=changeme
     depends_on:
-    - db #this tells that the app service dependce on the db service
+      - db #this tells that the app service dependce on the db service
 
   db:
     image: postgres:13-alpine
@@ -30,7 +30,6 @@ services: #the services contains app that is going to run our application
       - POSTGRES_DB=devdb
       - POSTGRES_USER=devuser
       - POSTGRES_PASSWORD=changeme
-    
 
 volumes:
   dev-db-data:
